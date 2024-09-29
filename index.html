@@ -1,232 +1,381 @@
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Landed by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | [Your Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-			<!-- Header -->
-				<!-- <header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header> -->
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #DEF2F1; /* Light Cream Background */
+            color: #17252A; /* Dark Slate Text */
+            line-height: 1.6;
+        }
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>Software Developer & Data Engineer</h2>
-							<p>I code software systems. I have experience <br/> 
-								building backend systems, microservices, data <br/>
-								platforms and automation tools. And I love what I do.</p>
-						</header>
-						<span class="image"><img src="images/IMG_1028.HEIC" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/data_eng.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>Data Engineering</h2>
-										<p>I have built real-time and batch processing data infrastructure
-										   for enterprise products using in-house setup and cloud tools.
-										</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<h4>Real-time Stack</h4>
-									<ul>
-										<li>Kafka</li>
-										<li>Spark</li>
-										<li>Storm</li>
-										<li>Google Firebase</li>
-										<li>MongoDB</li>
-									</ul>
-								</div>
-								<div class="col-4 col-12-medium">
-									<h4>Batch Processing Stack</h4>
-									<ul>
-										<li>Python Automation</li>
-										<li>MySQL</li>
-										<li>AWS</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+        /* Header & Navigation Styling */
+        header {
+            background: #007B7F; /* Slate Gray */
+            color: #DEF2F1; /* Dark Slate Text */
+            padding: 2rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/web_dev.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Full Stack Development</h2>
-							<p>I love building website. I have experience with full-stack development on multiple products.</p>
-						</header>
-						<h4>Stack</h4>
-						<ul>
-							<li>Django</li>
-							<li>NodeJs</li>
-							<li>ReactJS</li>
-							<li>Redux</li>
-							<li>Redis</li>
-							<li>Messaging Services</li>
-						</ul>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/auto.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>System Automation</h2>
-							<p>Have experience automating data center servers, databases and process automation.</p>
-						</header>
-						<p>Lot of my work in automation is involved with backing up data in rolling fashion, creating BI reports, server cleanups and automating data transfer processes.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+        nav ul li {
+            margin: 0 20px;
+        }
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Projects</h2>
-							<p>Below are some of my projects that I would like to showcase here.</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://github.com/adarshtri/build_interface_ui"><span class="icon solid alt major fa-chart-area"></span></a>
-									<a href="https://github.com/adarshtri/build_interface_ui"><h3>OpenShift Build Management Dashboard</h3></a>
-									<p>Simplistic and clean dashboard to track builds and releases for RedHat OpenShift.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://konnect.kirusa.com/"><span class="icon solid alt major fa-chart-area"></span></a>
-									<a href="https://konnect.kirusa.com/"><h3>Kirusa Konnect</h3></a>
-									<p>Real-time data pipeline, BI reports and APIs.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://github.com/adarshtri/chord-dht"><span class="icon solid alt major fa-comment"></span></a>
-									<a href="https://github.com/adarshtri/chord-dht"><h3>Distributed Hash Table</h3></a>
-									<p>Implemented a distributed lookup table with fault resistance and replication.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://github.com/adarshtri/Focus-Android-App"><span class="icon solid alt major fa-flask"></span></a>
-									<a href="https://github.com/adarshtri/Focus-Android-App"><h3>FOCUS Android Application</h3></a>
-									<p>Social media and communication platform for an Open Source community.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://github.com/adarshtri/personalautomation"><span class="icon solid alt major fa-flask"></span></a>
-									<a href="https://github.com/adarshtri/personalautomation"><h3>Personal Automation</h3></a>
-									<p>Easy to configure python library to automate folder management on Linux Systems.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<a href="https://enterprise.kirusa.com/loudmouth/"><span class="icon solid alt major fa-paper-plane"></span></a>
-									<a href="https://enterprise.kirusa.com/loudmouth/"><h3>B2B Enterprise Portal</h3></a>
-									<p>Designed the web backend, data collections and BI automations for the system.</p>
-								</section>
-							</div>
-						</div>
-						<!-- <footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer> -->
-					</div>
-				</section>
+        nav ul li a {
+            color: #DEF2F1; /* Dark Slate */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 15px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+        }
 
-			<!-- Five -->
-				<!-- <section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
-					</div>
-				</section> -->
+        nav ul li a:hover, nav ul li a.active {
+            color: #FE7F2D; /* Accent Orange */
+            transform: scale(1.1); /* Scale effect on hover */
+        }
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-						<li><a href="www.linkedin.com/in/adarshtri720" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<li><a href="https://github.com/adarshtri" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="adtrived@redhat.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+        /* Hero Section */
+        .hero {
+            background-color: #3AAFA9; /* Teal for Hero Background */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #DEF2F1; /* Light Cream Text */
+            text-align: center;
+            padding: 0 2rem;
+        }
 
-		</div>
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0; /* Start with hidden opacity */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0; /* Start with hidden opacity */
+            animation: fadeIn 1.2s forwards; /* Fade-in animation */
+        }
 
-	</body>
+        /* Container Styling */
+        .container {
+            padding: 100px 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3AAFA9; /* Teal for Section Titles */
+            opacity: 0; /* Start with hidden opacity */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0; /* Start with hidden opacity */
+            animation: fadeIn 1.2s forwards; /* Fade-in animation */
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            width: 100%;
+            max-width: 350px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0; /* Start with hidden opacity */
+            animation: fadeIn 1.3s forwards; /* Fade-in animation */
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #3AAFA9; /* Teal for Card Titles */
+        }
+
+        .project-card p {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card a {
+            color: #FE7F2D; /* Accent Orange for Links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #3AAFA9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007B7F; /* Slate Gray Footer */
+            color: #DEF2F1; /* Dark Slate */
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        footer a {
+            color: #FE7F2D;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll Effect */
+        section {
+            padding: 4rem 0;
+            transition: opacity 1s ease;
+        }
+
+        /* Fade-in Effect for Sections */
+        .hidden {
+            opacity: 0;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        /* Keyframes for Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Optional: slight upward movement */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[Your Name] | Machine Learning Engineer</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#ml-projects" class="nav-link">ML Projects</a></li>
+                <li><a href="#data-science-projects" class="nav-link">Data Science</a></li>
+                <li><a href="#web-dev-projects" class="nav-link">Web Development</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my expertise in software engineering and machine learning projects that solve real-world problems.</p>
+    </section>
+
+    <div class="container">
+        <!-- Machine Learning Projects Section -->
+        <section id="ml-projects" class="hidden">
+            <div class="section-title">
+                <h2>Machine Learning Projects</h2>
+                <p>Here are some of my machine learning projects, utilizing techniques such as neural networks, deep learning, and more.</p>
+            </div>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Image Classifier</h3>
+                    <p>
+                        Built a convolutional neural network using PyTorch to classify images into multiple categories with over 90% accuracy.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Predictive Stock Price Model</h3>
+                    <p>
+                        Developed a time series forecasting model using LSTM to predict stock prices based on historical data.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>NLP Sentiment Analysis</h3>
+                    <p>
+                        Implemented a natural language processing model to analyze sentiments in tweets and predict positive or negative emotions.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Science Projects Section -->
+        <section id="data-science-projects" class="hidden">
+            <div class="section-title">
+                <h2>Data Science Projects</h2>
+                <p>Explore my data science projects that involve data analysis, visualization, and insight generation.</p>
+            </div>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>COVID-19 Data Dashboard</h3>
+                    <p>
+                        Created an interactive dashboard using Plotly and Dash to visualize COVID-19 statistics, including cases, deaths, and recoveries.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development Projects Section -->
+        <section id="web-dev-projects" class="hidden">
+            <div class="section-title">
+                <h2>Web Development Projects</h2>
+                <p>Explore my web development projects where I implemented responsive designs and developed full-stack applications.</p>
+            </div>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>
+                        Built a personal website to showcase my projects and skills using HTML, CSS, and JavaScript.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>E-commerce Store</h3>
+                    <p>
+                        Developed a full-stack e-commerce store with features like user authentication, product management, and payment gateway.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Real-time Chat Application</h3>
+                    <p>
+                        Created a real-time chat application using Node.js, Express, and Socket.io to facilitate instant messaging.
+                    </p>
+                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="hidden">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>If you’d like to get in touch, feel free to reach out via the following platforms.</p>
+            </div>
+            <div>
+                <p>Email: [Your Email]</p>
+                <p>LinkedIn: <a href="your-linkedin-profile" target="_blank">[Your LinkedIn]</a></p>
+                <p>GitHub: <a href="your-github-profile" target="_blank">[Your GitHub]</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll to Sections
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in Effect for Sections
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('hidden');
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
 </html>
+
