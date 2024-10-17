@@ -21,6 +21,45 @@
             line-height: 1.6;
         }
 
+        /* Sidebar Styling */
+        .sidebar {
+            padding-top: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #3AAFA9; /* Slate Gray */
+            color: #DEF2F1; /* Light Cream */
+            #padding-top: 2rem;
+            text-align: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: top 0.3s ease;
+            transition: padding-top 0.3s;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: #DEF2F1; /* Light Cream */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background-color: #FE7F2D; /* Accent Orange */
+        }
+
         /* Smooth Scroll Effect */
         html {
             scroll-behavior: smooth;
@@ -37,6 +76,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensures header doesn't overlap the sidebar */
+            z-index: 1; /* Lower z-index than the sidebar */
         }
 
         nav ul {
@@ -95,6 +136,12 @@
         /* Container Styling */
         .container {
             padding: 100px 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-button {
+            padding: 10px 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -190,10 +237,6 @@
             transition: background-color 0.3s ease;
         }
 
-        .cta-button:hover {
-            background-color: #3AAFA9; /* Teal */
-        }
-
         .social-icons {
             margin: 20px 0;
         }
@@ -254,26 +297,35 @@
 </head>
 <body>
 
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#ml-projects" class="nav-link">ML Projects</a></li>
+            <li><a href="#medium-articles" class="nav-link">Medium Articles</a> </li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
     <header>
         <h1>Adarsh Trivedi  |  Machine Learning Engineer</h1>
-        <nav>
-            <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#ml-projects" class="nav-link">ML Projects</a></li>
-                <li><a href="#data-science-projects" class="nav-link">Data Science</a></li>
-                <li><a href="#web-dev-projects" class="nav-link">Web Development</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <img src="images/my_img2.jpg" alt="Your Name" class="profile-pic">
         <h1>Welcome to My Portfolio</h1>
-        <p>Showcasing my expertise in software engineering and machine learning projects that solve real-world problems.</p>
+        <p>I am a Machine Learning Engineer at AWS with a passion for creating innovative Software and Machine Learning systems to enable development and productionalization of ML models at scale.</p>
         <br/>
-        <a href="#ml-projects" class="cta-button">View My Projects</a>
+        <p>Recently, I've embarked on a journey to explore machine learning and AI in-depth. This exploration has fueled my drive to delve into the field through practical projects, showcasing my commitment to continuous learning and growth. Dive into my portfolio to see hosted demos of my work and read my Medium articles, where I share insights and experiences from my journey in machine learning.</p>
+        <br/>
+        <div class="intro-button">
+            <a href="https://www.linkedin.com/in/adarshtri720/" class="cta-button" target="_blank">Find me on LinkedIn</a>
+            <a href="https://github.com/adarshtri" class="cta-button" target="_blank">Follow me on GitHub</a>
+            <a href="https://trivadar-mle.streamlit.app/" class="cta-button" target="_blank">Explore my Project Demos</a>
+            <a href="https://medium.com/@adarshtri" class="cta-button" target="_blank">Explore my Medium Articles</a>
+        </div>
+
     </section>
 
     <div class="container">
@@ -294,67 +346,29 @@
                     <br>
                     <a href="https://trivadar-mle.streamlit.app/Content_Based_Movie_Recommendation" target="_blank">See Demo!</a>
                 </div>
-                <div class="project-card">
-                    <h3>Predictive Stock Price Model</h3>
-                    <p>
-                        Developed a time series forecasting model using LSTM to predict stock prices based on historical data.
-                    </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>NLP Sentiment Analysis</h3>
-                    <p>
-                        Implemented a natural language processing model to analyze sentiments in tweets and predict positive or negative emotions.
-                    </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
-                </div>
             </div>
         </section>
 
         <!-- Data Science Projects Section -->
-        <section id="data-science-projects" class="hidden">
+        <section id="medium-articles" class="hidden">
             <div class="section-title">
-                <h2>Data Science Projects</h2>
-                <p>Explore my data science projects that involve data analysis, visualization, and insight generation.</p>
+                <h2>Medium Articles</h2>
+                <p>I've passion for writing. Writing helps me gain clarity and share things that I learn with everyone.</p>
             </div>
             <div class="projects">
                 <div class="project-card">
-                    <h3>COVID-19 Data Dashboard</h3>
+                    <h3>ML Classification: Build Efficient Classification Model</h3>
                     <p>
-                        Created an interactive dashboard using Plotly and Dash to visualize COVID-19 statistics, including cases, deaths, and recoveries.
+                        This article is an introduction to fundamentals concepts and performance techniques that are used for building a highly efficient classification model.
                     </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Web Development Projects Section -->
-        <section id="web-dev-projects" class="hidden">
-            <div class="section-title">
-                <h2>Web Development Projects</h2>
-                <p>Explore my web development projects where I implemented responsive designs and developed full-stack applications.</p>
-            </div>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>
-                        Built a personal website to showcase my projects and skills using HTML, CSS, and JavaScript.
-                    </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                    <a href="https://medium.com/@adarshtri/ml-classification-fundamentals-for-building-an-efficient-classification-model-8e332c796201" target="_blank">Read Article</a>
                 </div>
                 <div class="project-card">
-                    <h3>E-commerce Store</h3>
+                    <h3>Gradient Descent: Zero to One</h3>
                     <p>
-                        Developed a full-stack e-commerce store with features like user authentication, product management, and payment gateway.
+                        This article explains the Gradient Descent algorithm from the ground up. The article contains core concepts, that are later put together to explain the algorithm.
                     </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Real-time Chat Application</h3>
-                    <p>
-                        Created a real-time chat application using Node.js, Express, and Socket.io to facilitate instant messaging.
-                    </p>
-                    <a href="link-to-github" target="_blank">View on GitHub</a>
+                    <a href="https://medium.com/@adarshtri/gradient-descent-algorithm-zero-to-one-4316436192df" target="_blank">Read Article</a>
                 </div>
             </div>
         </section>
@@ -369,12 +383,13 @@
                 <p>Email: adarsh.trivedi100@gmail.com</p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/adarshtri720/" target="_blank">adarshtri720</a></p>
                 <p>GitHub: <a href="https://github.com/adarshtri" target="_blank">adarshtri</a></p>
+                <p>Medium: <a href="https://medium.com/@adarshtri" target="_blank">adarshtri</a></p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2024 Adarsh Trivedi. All Rights Reserved.</p>
     </footer>
 
     <script>
