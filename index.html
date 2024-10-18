@@ -21,45 +21,6 @@
             line-height: 1.6;
         }
 
-        /* Sidebar Styling */
-        .sidebar {
-            padding-top: 100px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 250px;
-            background-color: #3AAFA9; /* Slate Gray */
-            color: #DEF2F1; /* Light Cream */
-            #padding-top: 2rem;
-            text-align: center;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            transition: top 0.3s ease;
-            transition: padding-top 0.3s;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar ul li {
-            margin: 20px 0;
-        }
-
-        .sidebar ul li a {
-            color: #DEF2F1; /* Light Cream */
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            display: block;
-            padding: 10px 0;
-            transition: background-color 0.3s ease;
-        }
-
-        .sidebar ul li a:hover, .sidebar ul li a.active {
-            background-color: #FE7F2D; /* Accent Orange */
-        }
-
         /* Smooth Scroll Effect */
         html {
             scroll-behavior: smooth;
@@ -141,6 +102,9 @@
         }
 
         .intro-button {
+            display: flex;
+            gap: 2rem;
+            padding: 10px 0;
             padding: 10px 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -227,6 +191,7 @@
         }
 
         .cta-button {
+            margin: 2px;
             background-color: #FE7F2D; /* Accent Orange */
             color: #DEF2F1; /* Light Cream */
             padding: 10px 20px;
@@ -297,16 +262,6 @@
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#ml-projects" class="nav-link">ML Projects</a></li>
-            <li><a href="#medium-articles" class="nav-link">Medium Articles</a> </li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </div>
-
     <header>
         <h1>Adarsh Trivedi  |  Machine Learning Engineer</h1>
     </header>
@@ -315,17 +270,16 @@
     <section class="hero">
         <img src="images/my_img2.jpg" alt="Your Name" class="profile-pic">
         <h1>Welcome to My Portfolio</h1>
-        <p>I am a Machine Learning Engineer at AWS with a passion for creating innovative Software and Machine Learning systems to enable development and productionalization of ML models at scale.</p>
-        <br/>
-        <p>Recently, I've embarked on a journey to explore machine learning and AI in-depth. This exploration has fueled my drive to delve into the field through practical projects, showcasing my commitment to continuous learning and growth. Dive into my portfolio to see hosted demos of my work and read my Medium articles, where I share insights and experiences from my journey in machine learning.</p>
-        <br/>
         <div class="intro-button">
             <a href="https://www.linkedin.com/in/adarshtri720/" class="cta-button" target="_blank">Find me on LinkedIn</a>
             <a href="https://github.com/adarshtri" class="cta-button" target="_blank">Follow me on GitHub</a>
             <a href="https://trivadar-mle.streamlit.app/" class="cta-button" target="_blank">Explore my Project Demos</a>
             <a href="https://medium.com/@adarshtri" class="cta-button" target="_blank">Explore my Medium Articles</a>
         </div>
-
+        <p>I am a Machine Learning Engineer at AWS with a passion for creating innovative Software and Machine Learning systems to enable development and productionalization of ML models at scale.</p>
+        <br/>
+        <p>Recently, I've embarked on a journey to explore machine learning and AI in-depth. This exploration has fueled my drive to delve into the field through practical projects, showcasing my commitment to continuous learning and growth. Dive into my portfolio to see hosted demos of my work and read my Medium articles, where I share insights and experiences from my journey in machine learning.</p>
+        <br/>
     </section>
 
     <div class="container">
